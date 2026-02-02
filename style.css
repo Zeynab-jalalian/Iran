@@ -117,7 +117,12 @@ body {
     100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-
+body.final {
+    background: #1a0a0a;
+    background-image: url("img/f.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
 @media (max-width: 600px) {
     body {
         padding: 20px;
@@ -132,5 +137,8 @@ body {
 
     .image-wrapper img {
         filter: contrast(1.1) brightness(0.95) saturate(0.85);
+    }
+     body.final {
+        background-size: 85%;
     }
 }

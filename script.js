@@ -1,6 +1,7 @@
 const wrapper = document.querySelector(".image-wrapper");
 const wrapperImg = document.querySelector(".image-wrapper img");
 const frame = document.querySelector(".frame");
+
 let hits = 0;
 const crackImages = [
   "img/crack-1.png",
@@ -19,6 +20,7 @@ wrapper.addEventListener("click", () => {
   if (hits === 15) {
     wrapper.classList.add("breakAll");
     frame.classList.add("none");
+    document.body.classList.add("final");
   }
   const crack = document.createElement("div");
   crack.classList.add("crack");
