@@ -9,6 +9,7 @@ const crackImages = [
   "img/crack-3.png",
   "img/blood.png",
 ];
+const finalMusic=new Audio("sounds/iran.mp3")
 const sounds = [new Audio("sounds/s1.mp3"), new Audio("sounds/s2.mp3")];
 let brightness = 1;
 
@@ -21,6 +22,7 @@ wrapper.addEventListener("click", () => {
     wrapper.classList.add("breakAll");
     frame.classList.add("none");
     document.body.classList.add("final");
+    finalMusic.play();
   }
   const crack = document.createElement("div");
   crack.classList.add("crack");
