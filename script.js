@@ -20,7 +20,7 @@ wrapper.addEventListener("click", () => {
   void frame.offsetWidth; 
   frame.classList.add("shake");
   hits++;
-  if (hits === 80) {
+  if (hits === 50) {
     wrapper.classList.add("breakAll");
     frame.classList.add("none");
     document.body.classList.add("final");
@@ -44,7 +44,7 @@ wrapper.addEventListener("click", () => {
 
   wrapper.appendChild(crack);
 
-  brightness -= 0.01;
+  brightness -= 0.03;
   wrapperImg.style.filter = `brightness(${brightness})`;
 });
 window.addEventListener("load",()=>{

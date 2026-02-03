@@ -132,7 +132,7 @@ body {
 }
 
 body.final {
-  background: #000000;
+  background: #ffffff;
   background-image: url("img/f.jpg");
   background-position: center;
   background-repeat: no-repeat;
