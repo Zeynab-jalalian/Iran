@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at top, #551414  0%, #000 70%);
+    background: radial-gradient(circle at top, #0c0c0c  0%, #000 70%);
 }
 
 
@@ -60,6 +60,9 @@ body {
     object-fit: cover;
     filter: brightness(1);
     box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 

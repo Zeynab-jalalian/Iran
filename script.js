@@ -11,6 +11,8 @@ const crackImages = [
 ];
 const finalMusic=new Audio("sounds/iran.mp3")
 const sounds = [new Audio("sounds/s1.mp3"), new Audio("sounds/s2.mp3")];
+sounds.forEach(sound=>sound.volume=0.3)
+
 let brightness = 1;
 
 wrapper.addEventListener("click", () => {
@@ -18,11 +20,10 @@ wrapper.addEventListener("click", () => {
   void frame.offsetWidth; 
   frame.classList.add("shake");
   hits++;
-  if (hits === 15) {
+  if (hits === 150) {
     wrapper.classList.add("breakAll");
     frame.classList.add("none");
     document.body.classList.add("final");
-    finalMusic.play();
   }
   const crack = document.createElement("div");
   crack.classList.add("crack");
@@ -43,6 +44,11 @@ wrapper.addEventListener("click", () => {
 
   wrapper.appendChild(crack);
 
-  brightness -= 0.1;
+  brightness -= 0.01;
   wrapperImg.style.filter = `brightness(${brightness})`;
 });
+window.addEventListener("load",()=>{
+  finalMusic.currentTime=15;
+  finalMusic.play().catch(console.log("Autoplay blocked")
+  );
+})
