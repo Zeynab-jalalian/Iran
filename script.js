@@ -9,15 +9,15 @@ const crackImages = [
   "img/crack-3.png",
   "img/blood.png",
 ];
-const finalMusic=new Audio("sounds/iran.mp3")
+const finalMusic = new Audio("sounds/iran.mp3");
 const sounds = [new Audio("sounds/s1.mp3"), new Audio("sounds/s2.mp3")];
-sounds.forEach(sound=>sound.volume=0.2)
+sounds.forEach((sound) => (sound.volume = 0.2));
 
 let brightness = 1;
 
 wrapper.addEventListener("click", () => {
   frame.classList.remove("shake");
-  void frame.offsetWidth; 
+  void frame.offsetWidth;
   frame.classList.add("shake");
   hits++;
   if (hits === 50) {
@@ -46,9 +46,6 @@ wrapper.addEventListener("click", () => {
 
   brightness -= 0.03;
   wrapperImg.style.filter = `brightness(${brightness})`;
+  finalMusic.play().catch(console.log("Autoplay blocked"));
+  finalMusic.currentTime = 25;
 });
-window.addEventListener("load",()=>{
-  finalMusic.currentTime=25;
-  finalMusic.play().catch(console.log("Autoplay blocked")
-  );
-})
