@@ -46,6 +46,8 @@ wrapper.addEventListener("click", () => {
 
   brightness -= 0.03;
   wrapperImg.style.filter = `brightness(${brightness})`;
+});
+window.addEventListener("load",()=>{
   finalMusic.play().catch(console.log("Autoplay blocked"));
   finalMusic.currentTime = 25;
-});
+})
