@@ -25,6 +25,9 @@ body {
   position: relative;
   animation: pulse 6s ease-in-out infinite;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .frame::before {

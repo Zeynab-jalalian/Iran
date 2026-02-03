@@ -20,7 +20,7 @@ wrapper.addEventListener("click", () => {
   void frame.offsetWidth; 
   frame.classList.add("shake");
   hits++;
-  if (hits === 100) {
+  if (hits === 80) {
     wrapper.classList.add("breakAll");
     frame.classList.add("none");
     document.body.classList.add("final");
